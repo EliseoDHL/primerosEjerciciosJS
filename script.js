@@ -100,3 +100,154 @@ console.log(operacionMatematica);
 
 console.log(typeof(esAdministrador)); // boolean
 console.log(typeof(edadDeFelipe)); // number
+
+
+/* Tipos de Variables
+
+En JS tenemos 3 tipos principales de variables:
+
+    - var: Era la forma principal de declarar variables. Es una variable muy flexible, tiene un scope (alcance) blobal, esto es, que el valor de esta variable esta disponible en todo el programa.
+
+    - let: Lo usamos para limitar el alcance de nuestras variables (scope) y se limita a un bloque de codigo o expresion (meter a la mama de bambi en una cajita), es una variable local.
+
+    - const: Se usan para declarar una variable con un valor constante o inmutable (que no cambia).
+
+*/
+
+//En este caso, La mama de bambi esta visible desde cualquier lugar del programa
+var mamaDeBambiViva = false;
+
+var cazador = "listo para disparar";
+
+let nombre = "Felipe Maqueda"
+
+const pi = 3.1416;
+
+/* 
+
+Funciones
+
+Una funcion es una agrupacion de instrucciones que se ejecutan cuando se llama o se invoca. Las funciones pueden recibir parametros y devolver valores. Es importante mencionar que las funciones no me ejecutan sino que se invocan.
+
+Parametros = variables que necesitamos para alimentar mi funcion (todas las variables se tienen que utilizar)
+
+Ejemplo: Limon, azucar, vasito de agua, cucharita, hielos, agua.
+
+Nombre para la funcion: Con el nombre, nosotros vamos a poder activar o invocar la funcion (basicamente, tenemos que llamarla para que funcione)
+
+Ejemplo: Preparar aguita de limon
+
+Operaciones: Conjunto de instrucciones (en orden especifico)
+
+Ejemplo: 1)Corta el limon 2)Exprimir el limon
+
+Resultado: Las funciones generalmente deben tener un resultado.
+
+Ejemplo: Vasito de agua de limon
+
+*/
+
+// 1. Creamos la funcion con la palabra reservaba function y le ponemos un nombre. Despues, abrimos y cerramos parentwsis y  abriremos y cerraremos llaves{}
+
+// 2. Ponemos nuestros parametros (variables) dentro del parentesis
+
+// 3. Poenr las instrucciones dentro de las llaves
+
+
+
+
+
+function prepararAguitaDeLimon(limon, agua, hielos, azucar, vaso, cuchara){
+
+    var limon = "Limon";
+    var agua = "Agua";
+    var hielos = "Hielos";
+    var azucar = "Azucar";
+    var vaso = "Vaso";
+    var cuchara = "Cuchara";
+
+    console.log("Cortar el limon "+limon);
+    console.log("Exprimir el limon ");
+    console.log("Agregar el jugo de limon al vaso "+agua);
+    console.log("Agregar los hielos al vaso "+hielos);
+    console.log("Agregamos el agua al vaso "+vaso);
+    console.log("Endulzamos al gusto "+azucar);
+    console.log("Mexclar y disfrutar "+cuchara);
+
+    var cuchara ="tenedor";
+
+    console.log(cuchara);
+}
+
+prepararAguitaDeLimon();
+
+// Ejemplo de las 3 formas de agregar parametros a funciones
+
+function suma(a, b){
+    var a = 5;
+    var b = 7;
+
+    operacion = a + b;
+
+
+    console.log(operacion);
+}
+
+suma();
+
+// Segunda Forma
+
+function resta (a=8, b=5){
+    operation = a-b;
+    console.log(operacion);
+}
+
+resta();
+
+//Tercera forma
+function multiplicacion(a,b){
+    operacion = a*b;
+    console.log(operacion);
+}
+
+multiplicacion(3,9);
+multiplicacion(6,4);
+multiplicacion(8,32);
+multiplicacion(35,26);
+multiplicacion(70,4);
+multiplicacion(7,6);
+multiplicacion(15,22);
+multiplicacion(54,72);
+multiplicacion(21,53);
+multiplicacion(13,27);
+
+// Funciones anonimas
+
+let funcionAnonima = function(a,b){
+    operacion = a/b;
+    console.log(operacion);
+}
+
+//Return
+
+//Funcion para dar un saludo personalizado
+
+//primero defino mi funcion
+
+function saludo(nombreSaludo){
+    //declaro e inicializo mi valor del nombre
+    nombreSaludo = "Felipe"
+
+    //uso ese nombre para personalizar mi saludo
+    console.log("Hola " + nombreSaludo + ", Bienvenido a Frijolito Vegano");
+
+    //Finalizo la ejecucion de mi funcion, y tomo el dato de la variable llamada nombreSaludo para poder verla (recordemos que esta en un contexto local) y tambien para poder usarla despues en otras operaciones
+    return nombreSaludo;
+}
+
+//Para poder usar esa variable que hasta este momento de la funcion, pero que no sabemos donde esta (porque esta en limbo de funciones). Y en esta nueva variable ponemos la invocacion de la funcion.
+
+let nombreQueSaqueDeMiFuncion=saludo();
+
+console.log(nombreQueSaqueDeMiFuncion);
+

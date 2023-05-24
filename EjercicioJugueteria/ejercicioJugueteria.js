@@ -1,11 +1,19 @@
-pesoPayaso = 112;
-pesoMuñeca = 75;
+var payasoVendido = prompt("Introduce la cantidad de payasos a comprar:");
 
-payasoVendido =27;
-muñecaVendida =14;
+var muñecaVendida = prompt("Introduce la cantidad de muñecas a comprar:");
 
-pesoVendidoPayaso = pesoPayaso * payasoVendido;
-pesoVendidoMuñeca = pesoMuñeca * muñecaVendida;
-totalDelPedido= (pesoVendidoPayaso + pesoVendidoMuñeca) /1000;
+const pesoPayaso = 112;
+const pesoMuñeca = 75;
 
-console.log("Peso total del Paquete:" + totalDelPedido+ "kg");
+function calculoPeso(){
+    pesoVendidoPayaso = pesoPayaso * payasoVendido;
+    pesoVendidoMuñeca = pesoMuñeca * muñecaVendida;
+    totalDelPedido= (pesoVendidoPayaso + pesoVendidoMuñeca) /1000;
+    
+
+    
+    return console.log("El peso total del pedido es de " + totalDelPedido + " Kg");    
+}
+
+calculoPeso();
+
