@@ -163,7 +163,7 @@ switch (expresion o condicion){
 
 let pisoDestino = prompt ("Ingresa el piso al que deseas ir (1 al 5): ");
 
-switch(psioDestino){
+switch(pisoDestino){
     //para jugar con nuestros casos, el tipo de dato debe coincidir para que se ejecute correctamente
     case"1":
         console.log("Vamos a piso 1 (suena musica de elevador de fondo)");
@@ -191,26 +191,38 @@ switch(psioDestino){
 
 //Ejercicio de Eevee
 
-var elementoEvolucion = prompt("Ingresa el elemeto con el que evolucionaras a tu pokemon");
+var elementoEvolucion = prompt("Ingresa el elemeto con el que evolucionaras a tu pokemon: \n Cuentas con las siguientes opciones: \n piedra fuego \n piedra trueno \n piedra agua \n feliz de dia \n feliz de noche \n roca musgo \n roca hielo \n movimiento tipo hada");
 
 switch(elementoEvolucion){
-    case "piedraFuego":
+    case "piedra fuego":
         console.log("Tu Eevee ha evolucionado a Flareon");
     break;
 
-    case "piedraTrueno":
+    case "piedra trueno":
         console.log("Tu Eevee ha evolucionado a Jolteon");
     break;
 
-    case "piedraAgua":
+    case "piedra agua":
         console.log("Tu Eevee ha evolucionado a Vaporeon");
     break;
 
-    case "piedraFuego":
-        console.log("Tu Eevee ha evolucionado a Flareon");
+    case "feliz de dia":
+        console.log("Tu Eevee ha evolucionado a Espeon");
     break;
 
-    case "piedraFuego":
-        console.log("Tu Eevee ha evolucionado a Flareon");
+    case "feliz de noche":
+        console.log("Tu Eevee ha evolucionado a Umbreon");
+    break;
+
+    case "roca musgo":
+        console.log("Tu Eevee ha evolucionado a Leafeon");
+    break;
+
+    case "roca hielo":
+        console.log("Tu Eevee ha evolucionado a Glaceon");
+    break;
+
+    case "movimiento tipo hada":
+        console.log("Tu Eevee ha evolucionado a Sylveon");
     break;
 }
