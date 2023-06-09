@@ -170,11 +170,22 @@ console.log(objeto);
 
 /*Como nuestro servidor no interpreta objetos "puros", necesitamos convertirlos a cadenas de texto. Este proceso se le conoce como serializar
 
-sisntaxis para pasar de objeto normal de JS a JSON es
+La sisntaxis para pasar de objeto normal de JS a JSON es:
 
 JSON.stringify(objeto que quiero serializar)
 
 */
 
-console.log(JSON.stringify(objeto));
 
+let objetoSerializado = (JSON.stringify(objeto));
+
+//Podemos imprimir nuestro objeto serializado,  y lo veremos como una cadena de texto
+console.log("Este es un objeto serializado: ", objetoSerializado);
+
+//Si tratamos de acceder a lagun de las propiedades de nuestro objeto serializado, no podremos ya que no nos mostrara "undefined"
+console.log(objetoSerializado.nombre);
+
+//Para deserealizar un objeto JSON, vamos a utilizar un metodo llamado JSON.parse (objeto que queremos deserealizar)
+
+let objetoDeserializado = (JSON.parse(objetoSerializado));
+console.log(objetoDeserializado);
